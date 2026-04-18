@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 15 14 13;
+    --foreground: 234 228 223;
+  }
+}
+
+body {
+  @apply bg-background text-on-surface selection:bg-primary selection:text-background;
+}
+
+.bg-noise {
+  background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAu1BrADwvptW0QA9H4Ps1UwN7ywZwstjzXokdQvk_v9H186yxA8BHeidRBVqEJphuxcy8RGFulJcYwuxHg5lj8SBK3hrvMqr7WtzHoafL6v7Z8GcNhxlyhFoeDov8PuEUkIRA3XpcVYBzNkY4v3es7I2RTWLoNPfQRi9zTslXeJMVekOeod4BuzhfgvVofi25PhIUL1kXpq6t5AHQMxwc7LjmqNvYfFf_iEHRpEZB4i4V7aIjd22Hr_7hF4qY_Rj35H23PlGvstB4);
+  opacity: 0.05;
+}
+
+.tonal-transition-bg {
+  background: linear-gradient(to bottom, rgba(10, 9, 8, 0.9), rgba(18, 17, 16, 0.8));
+}
+
+.copper-gold-gradient {
+  background: linear-gradient(135deg, #7A3614 0%, #EFAB22 100%);
+}
+
+.noir-gradient {
+  background: linear-gradient(135deg, #862217 0%, #131313 100%);
+}
+
+.noir-gradient-overlay {
+  background: linear-gradient(to bottom, rgba(19, 19, 19, 0) 0%, rgba(19, 19, 19, 0.9) 100%);
+}
+
+.text-glow {
+  text-shadow: 0 0 15px rgba(239, 171, 34, 0.3);
+}
+
+.ghost-border {
+  border: 1px solid rgba(81, 69, 52, 0.15);
+}
+
+/* Material Symbols configuration */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+}
