@@ -24,8 +24,37 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "DecibelDesigns | Premium Acoustic Design Solutions in New Delhi",
+  title: {
+    default: "DecibelDesigns | Premium Acoustic Design Solutions in New Delhi",
+    template: "%s | DecibelDesigns"
+  },
   description: "Specializing in professional Acoustic Design Solutions and Home Theatre setups in New Delhi. We transform spaces with surgical sonic precision for residential and commercial environments.",
+  openGraph: {
+    title: "DecibelDesigns | Premium Acoustic Design Solutions",
+    description: "Professional acoustic engineering and Home Theatre setups in New Delhi.",
+    url: "https://decibeldesigns.vercel.app",
+    siteName: "DecibelDesigns",
+    images: [
+      {
+        url: "/media/home/hero-home-cinema.jpg",
+        width: 1200,
+        height: 630,
+        alt: "DecibelDesigns - Acoustic Excellence",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DecibelDesigns | Acoustic Engineering",
+    description: "Professional acoustic design and home theatre setup services.",
+    images: ["/media/home/hero-home-cinema.jpg"],
+  },
+  icons: {
+    icon: "/media/logos/DD Icon.svg",
+    apple: "/media/logos/DD Icon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -36,7 +65,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <link rel="icon" href="/media/logos/DD Icon.svg" type="image/svg+xml" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
       </head>
       <body className={`${manrope.variable} ${inter.variable} ${playfair.variable} font-body bg-background text-on-surface antialiased selection:bg-primary selection:text-background`}>
