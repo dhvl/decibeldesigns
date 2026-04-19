@@ -55,28 +55,65 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Frequency Visualizer Decoration */}
-        <motion.div 
-          initial={{ opacity: 0, scaleY: 0 }}
-          animate={{ opacity: 0.1, scaleY: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
-          className="absolute bottom-0 right-0 w-1/2 h-64 pointer-events-none origin-bottom"
-        >
-          <svg className="w-full h-full text-secondary" viewBox="0 0 400 100">
-            <path 
-              d="M0 50 Q 50 10 100 50 T 200 50 T 300 50 T 400 50" 
-              fill="none" 
-              stroke="currentColor" 
+        {/* Dynamic Animated Soundwave */}
+        <div className="absolute bottom-0 right-0 w-full md:w-2/3 h-[400px] pointer-events-none z-0 overflow-hidden">
+          <svg className="w-full h-full" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Wave 1: Primary Gold (Deep & Slow) */}
+            <motion.path
+              animate={{
+                d: [
+                  "M0 300 C 100 280 200 320 300 300 C 400 280 500 320 600 300 C 700 280 800 320 900 300",
+                  "M0 310 C 100 330 200 290 300 310 C 400 330 500 290 600 310 C 700 330 800 290 900 310",
+                  "M0 300 C 100 280 200 320 300 300 C 400 280 500 320 600 300 C 700 280 800 320 900 300"
+                ]
+              }}
+              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+              stroke="#EFAB22"
+              strokeWidth="1"
+              strokeOpacity="0.15"
+            />
+            {/* Wave 2: Secondary Copper (Medium & Sharp) */}
+            <motion.path
+              animate={{
+                d: [
+                  "M0 320 C 150 250 300 390 450 320 C 600 250 750 390 900 320",
+                  "M0 330 C 150 400 300 260 450 330 C 600 400 750 260 900 330",
+                  "M0 320 C 150 250 300 390 450 320 C 600 250 750 390 900 320"
+                ]
+              }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+              stroke="#E46D32"
               strokeWidth="0.5"
-            ></path>
-            <path 
-              d="M0 60 Q 50 20 100 60 T 200 60 T 300 60 T 400 60" 
-              fill="none" 
-              stroke="currentColor" 
+              strokeOpacity="0.1"
+            />
+            {/* Wave 3: Subtle White (Fast & High Frequency) */}
+            <motion.path
+              animate={{
+                d: [
+                  "M0 310 Q 50 280 100 310 T 200 310 T 300 310 T 400 310 T 500 310 T 600 310 T 700 310 T 800 310 T 900 310",
+                  "M0 310 Q 50 340 100 310 T 200 310 T 300 310 T 400 310 T 500 310 T 600 310 T 700 310 T 800 310 T 900 310",
+                  "M0 310 Q 50 280 100 310 T 200 310 T 300 310 T 400 310 T 500 310 T 600 310 T 700 310 T 800 310 T 900 310"
+                ]
+              }}
+              transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+              stroke="white"
               strokeWidth="0.2"
-            ></path>
+              strokeOpacity="0.05"
+            />
           </svg>
-        </motion.div>
+          
+          {/* Subtle Vertical 'Equalizer' Pulse Overlay */}
+          <div className="absolute bottom-10 right-20 flex items-end gap-1.5 h-16 opacity-10">
+            {[...Array(12)].map((_, i) => (
+              <motion.div
+                key={i}
+                animate={{ height: [`${20 + Math.random() * 40}%`, `${60 + Math.random() * 40}%`, `${20 + Math.random() * 40}%`] }}
+                transition={{ duration: 1 + Math.random(), repeat: Infinity, ease: "easeInOut", delay: i * 0.1 }}
+                className="w-[1px] bg-primary"
+              />
+            ))}
+          </div>
+        </div>
       </header>
 
       {/* The Science of Silence Section */}
