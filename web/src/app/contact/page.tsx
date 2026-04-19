@@ -123,7 +123,7 @@ export default function ContactPage() {
               </a>
             </div>
             <Image 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb-_rk8dh0i-EJN28f4gbW5FXQCD_IijTnDTLvncz6o64TtLm7ENxRxjdNmwKXhW9oHVJ32miWOYuclRbyO5t7-k9fsPrBWCz4_bWlqgfG-mJDvsYDpHCPITCxevlmGHET7_9wfAE_wtb3hM16rqiNqzF5H37aaFTf-iY_W7qpxWECz5MJoUkgVqtxmd3aLQ9DG3nBPhqX6rL92hgdKI-vmUxgTTed1qs9VgYy5lu3JehJnK_DWnDE_010WN0n-RmNta3zGxJ_x7Q"
+              src="/media/contact/studio-interior.jpg"
               alt="Studio interior"
               fill
               className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale hover:grayscale-0 transition-all duration-700 pointer-events-none"

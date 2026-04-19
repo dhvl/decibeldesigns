@@ -5,11 +5,15 @@ export default function Footer() {
     <footer className="bg-surface-container-lowest w-full border-t border-outline-variant/10">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full">
         <div className="flex flex-col gap-4 items-center md:items-start mb-10 md:mb-0">
-          <div className="text-lg font-black text-primary font-headline uppercase">
-            DecibelDesigns
+          <div className="mb-2">
+            <img 
+              src="/media/logos/DD Logo White.svg" 
+              alt="DecibelDesigns" 
+              className="h-8 md:h-10 w-auto opacity-80"
+            />
           </div>
           <div className="text-sm font-accent italic text-outline">
-            © 2024 DecibelDesigns. Precision in sound.
+            © {new Date().getFullYear()} DecibelDesigns. Precision in sound.
           </div>
         </div>
 

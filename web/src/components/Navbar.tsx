@@ -15,6 +15,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "Services", href: "/services" },
     { name: "Portfolio", href: "/portfolio" },
+    { name: "Gallery", href: "/gallery" },
   ];
 
   return (
@@ -22,9 +23,13 @@ export default function Navbar() {
       <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto w-full">
         <Link 
           href="/" 
-          className="text-2xl font-bold tracking-tighter text-primary font-headline uppercase"
+          className="flex items-center"
         >
-          DecibelDesigns
+          <img 
+            src="/media/logos/DD Logo White.svg" 
+            alt="DecibelDesigns" 
+            className="h-10 md:h-12 w-auto object-contain"
+          />
         </Link>
         
         <div className="hidden md:flex items-center gap-10">

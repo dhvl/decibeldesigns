@@ -36,6 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        <link rel="icon" href="/media/logos/DD Icon.svg" type="image/svg+xml" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
       </head>
       <body className={`${manrope.variable} ${inter.variable} ${playfair.variable} font-body bg-background text-on-surface antialiased selection:bg-primary selection:text-background`}>

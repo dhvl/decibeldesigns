@@ -11,7 +11,7 @@ export default function Home() {
       <header className="relative min-h-screen flex items-center justify-start overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuojoV6fFdUxfJMvuQVzrSSH5TeIV4w22FIm9rJw5Wx4XfRgS-5xNxn7rCLTseCd9XAFCXI_RU2oGou31LM8aXMpk33GWkIxvAtkL0vC1Nu3M5oMXBQ3KcUlpr1otl6vpCe76bGn42rbOhHKDMDYOTmqZgyot8PLog1MK0kpGez01yGrdB8LAwEmu3-gl1QcM3_iSB6aB6VMqJ1kuvUZ_RnGS-dW0xQ1dLrVd9ceBBYROKPdHU5R6xNOsYWPsHLa2mqYragHBQznzI"
+            src="/media/home/hero-home-cinema.jpg"
             alt="ultra-luxury home cinema room"
             fill
             className="object-cover grayscale-[0.6] brightness-[0.25]"
@@ -92,7 +92,7 @@ export default function Home() {
             <div className="relative">
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm shadow-2xl">
                 <Image 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8gDSIYTfDSP5Sa5aybg6Pbk6eqbfGw2MH1CEbpRpZMJZvDB5ajXSlzVQjos_fhurA87IEh8m5WRcICa6xbCzppl9T5w15LKsuBjFSBYbLtu-0c9fx_jUC1aSae9f4JV-DI9frOUoOJ2Sji9HZv6zqngm-yY7gviceS7Ip0DZCA0NAlw3LO1hN8Pch_9_1WVl4IA0UrZG3AwTMNJCzMhjdZ9_yszzGjJ7IFJdE8xLO71xcixIWKXIeRDrkiheAO61A9LHZJz7zbBY" 
+                  src="/media/home/silence-lab.jpg" 
                   alt="high-end acoustic insulation and amplifier" 
                   fill
                   className="object-cover opacity-90 brightness-90"

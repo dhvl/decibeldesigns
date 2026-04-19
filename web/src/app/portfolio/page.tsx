@@ -8,7 +8,7 @@ export default function PortfolioPage() {
       category: "Institutional",
       year: "2024",
       desc: "A masterclass in spatial acoustics, featuring adaptive reverberation controls and bespoke copper diffusion panels.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAppi-WZBw7Qpluvp_0m5Yv8YfWxJuKOrAiH_7lQZSZz-7o-Hi7219msi07_ysJ_b-mnv5iwTkDkPpLtNCf8QVQN1jIpzqiEz-D-HE0xn-U8KMDyrhsp__vc5JcLdWgMB26EEKvoa2XNNEbtqnG89exfxjXwQEcS50SevA9rDVyYHlfXpARXTg_H5oPB5Xhc_CCEh7vYqZ-S5lNF2ptDr_TdoZDxiDTdha5MSIaBbZKhRHUJSysVx9cDfeKPVLyOY7gziqMJwZKrYU",
+      image: "/media/portfolio/grand-resort.jpg",
       size: "large"
     },
     {
@@ -16,7 +16,7 @@ export default function PortfolioPage() {
       category: "Residential",
       year: "2023",
       desc: "THX Certified Platinum",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBbbEjU-wJDiYkfB07CuRhU8pJxEzqV5RfS6tTyJhvHgvSl6qVs4F0NRoIrgVd9edEdMOvS_PbKETMlBYtGoAUFxPnv9mWZ7LeibTkpJw8nO6Fs86301z7ndqwCVWJsObe5zDmGu61oT1oKS8zfm_gH2iQJmeUS5iamcjjUNxWga4nTm3yM5TI5iaovPxkqXMCFvQX-C8kJ7KiRuyJ8OQI1hAvrZgPZtV2Ezc_5ki5E_nLZ-MPwxC1TC4pAFVuLUC9AymwtyGQ5c0s",
+      image: "/media/portfolio/bel-air-cinema.jpg",
       size: "small"
     },
     {
@@ -24,7 +24,7 @@ export default function PortfolioPage() {
       category: "Professional",
       year: "2024",
       desc: "Zero-noise floor architecture for multi-platinum production.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDH0LdrBBU-h0y1MN91U8Yfn5TBi8K-WigLsN6--Gi-PhBo8rLjTWtN8bDQ7fJuL7KkQGegI_TSiY9PPWhFWy2HVrJJu3cIXzMWBsveZGfIi-0m2Nin8lT2XtLK1VJ2JrGyx5XVeELIGbxmfk0jByPF-MRgPgaPbdpaKoBtmqvcSdS6dXwRRl_sHadH8JRcWlmTpAjpb8RfRUd67icBdMyHu78j-BxR6QJI3ze3NVTKvmTDlJvA-gY7fPokEFH8mSAJMH1JWvOOhV8",
+      image: "/media/portfolio/onyx-studios.jpg",
       size: "medium"
     }
   ];
