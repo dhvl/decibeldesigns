@@ -9,7 +9,7 @@ export default function Footer() {
             <img 
               src="/media/logos/DD Logo White.svg" 
               alt="DecibelDesigns" 
-              className="h-8 md:h-10 w-auto opacity-80"
+              className="h-10 md:h-12 w-auto opacity-80"
             />
           </div>
           <div className="text-sm font-accent italic text-outline">
