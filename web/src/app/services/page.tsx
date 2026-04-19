@@ -108,6 +108,7 @@ export default function ServicesPage() {
             </ul>
           </div>
         </div>
+      </div>
       {/* Client Call to Action */}
       <section className="mt-32 py-20 border-t border-outline-variant/10 text-center">
         <h2 className="text-3xl md:text-5xl font-headline font-bold mb-8">
