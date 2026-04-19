@@ -156,7 +156,7 @@ export default function Home() {
             {[
               { 
                 title: "Home Theatres", 
-                icon: "home_theater", 
+                icon: "theaters", 
                 desc: "Premium cinematic experiences with reference-level audio accuracy and bespoke room aesthetics." 
               },
               { 

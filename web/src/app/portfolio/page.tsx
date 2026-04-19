@@ -59,7 +59,7 @@ export default function PortfolioPage() {
               src={item.image} 
               alt={item.title} 
               fill
-              className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+              className="absolute inset-0 w-full h-full object-cover grayscale-0 group-hover:grayscale transition-all duration-700"
             />
             <div className="noir-gradient-overlay absolute inset-0"></div>
             <div className="absolute bottom-0 left-0 p-10 w-full">

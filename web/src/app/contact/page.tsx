@@ -35,10 +35,12 @@ export default function ContactPage() {
                 <div className="space-y-1">
                   <label className="font-accent italic text-sm text-outline">Project type</label>
                   <select className="w-full bg-surface-container-low border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-4 text-on-surface appearance-none outline-none cursor-pointer">
-                    <option value="home-theater">Home Theater</option>
-                    <option value="commercial">Commercial Audio</option>
-                    <option value="studio">Recording Studio</option>
-                    <option value="acoustic-treatment">Acoustic Treatment</option>
+                    <option value="home-theatre">Home Theatres & Media Rooms</option>
+                    <option value="recording-studio">Recording Studios & Music Rooms</option>
+                    <option value="corporate">Office Spaces & Conference Rooms</option>
+                    <option value="hospitality">Cafés, Restaurants & Lounges</option>
+                    <option value="commercial">Auditoriums & Commercial Spaces</option>
+                    <option value="luxury-resorts">Luxury Resorts & Hospitality</option>
                   </select>
                 </div>
                 <div className="space-y-1">
