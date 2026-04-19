@@ -9,7 +9,7 @@ export default function ServicesPage() {
         <div className="max-w-2xl">
           <span className="font-headline text-secondary tracking-[0.3em] uppercase text-xs mb-4 block">Engineered Environments</span>
           <h1 className="text-5xl md:text-7xl font-headline font-bold leading-tight text-on-surface">
-            Acoustic <i className="font-accent italic font-normal text-primary">Precision</i> for Exceptional <i className="font-accent italic font-normal text-primary">Ambience</i>
+            Acoustic <i className="font-accent italic font-normal text-primary">Design Solutions</i> in New <i className="font-accent italic font-normal text-primary">Delhi</i>
           </h1>
         </div>
         <div className="text-on-surface-variant font-body max-w-xs text-sm leading-relaxed border-l border-outline-variant/30 pl-6 mb-2">
@@ -108,7 +108,21 @@ export default function ServicesPage() {
             </ul>
           </div>
         </div>
-      </div>
+      {/* Client Call to Action */}
+      <section className="mt-32 py-20 border-t border-outline-variant/10 text-center">
+        <h2 className="text-3xl md:text-5xl font-headline font-bold mb-8">
+          Ready to <i className="font-accent italic font-normal text-primary">Transform</i> Your Space?
+        </h2>
+        <p className="text-on-surface-variant max-w-xl mx-auto mb-12 leading-relaxed">
+          Wherever sound quality matters, we provide customized acoustic solutions to enhance clarity, control noise, and create the perfect listening environment.
+        </p>
+        <Link 
+          href="/contact"
+          className="copper-gold-gradient px-12 py-5 text-background font-headline font-bold uppercase tracking-widest text-sm rounded-sm hover:shadow-[0_0_40px_rgba(239,171,34,0.4)] transition-all inline-block"
+        >
+          Contact our Acoustic Experts
+        </Link>
+      </section>
     </main>
   );
 }

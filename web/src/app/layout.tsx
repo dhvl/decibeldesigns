@@ -24,8 +24,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "DecibelDesigns | Precision in Sound",
-  description: "Bespoke acoustic engineering for residential and commercial spaces. Where technical precision meets luxury design.",
+  title: "DecibelDesigns | Premium Acoustic Design Solutions in New Delhi",
+  description: "Specializing in professional Acoustic Design Solutions and Home Theatre setups in New Delhi. We transform spaces with surgical sonic precision for residential and commercial environments.",
 };
 
 export default function RootLayout({

@@ -30,12 +30,12 @@ export default function Home() {
             <span className="inline-block py-1 px-3 mb-6 bg-secondary/10 text-secondary text-sm font-accent italic border border-secondary/20">
               Acoustic excellence
             </span>
-            <h1 className="text-6xl md:text-8xl font-headline font-extrabold text-on-surface leading-[1.1] tracking-tighter mb-8">
-              Perfection in <br/> 
-              <span className="text-primary font-accent italic font-medium capitalize">Sound.</span>
+            <h1 className="text-6xl md:text-8xl font-headline font-extrabold text-on-surface leading-[1.1] tracking-tighter mb-8 text-balance">
+              Professional Acoustic <br/> 
+              <span className="text-primary font-accent italic font-medium capitalize">Design Solutions.</span>
             </h1>
             <p className="text-xl md:text-2xl text-on-surface-variant font-light mb-12 max-w-xl leading-relaxed">
-              Bespoke acoustic engineering for residential and commercial spaces. Where technical precision meets luxury design.
+              New Delhi&apos;s premier engineering atelier for high-end Home Theatre setups, studios, and commercial spaces. Where technical precision meets luxury design.
             </p>
             <div className="flex flex-wrap gap-6">
               <Link 
@@ -155,19 +155,34 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant/10">
             {[
               { 
-                title: "Home Theaters", 
-                icon: "theaters", 
-                desc: "Immersive private cinemas designed with reference-level audio accuracy and bespoke aesthetics." 
+                title: "Home Theatres", 
+                icon: "home_theater", 
+                desc: "Premium cinematic experiences with reference-level audio accuracy and bespoke room aesthetics." 
+              },
+              { 
+                title: "Recording Studios", 
+                icon: "mic_external_on", 
+                desc: "Music rooms and production suites engineered for absolute frequency neutrality and sonic control." 
+              },
+              { 
+                title: "Corporate Spaces", 
+                icon: "corporate_fare", 
+                desc: "Intelligent acoustic zoning for office spaces and conference rooms to enhance clarity and privacy." 
+              },
+              { 
+                title: "Restaurants & Lounges", 
+                icon: "restaurant", 
+                desc: "Crafting the perfect auditory ambiance for cafés and restaurants to enhance guest comfort." 
               },
               { 
                 title: "Auditoriums", 
                 icon: "meeting_room", 
-                desc: "Large-scale acoustic modeling for performance venues where every seat is the best seat in the house." 
+                desc: "Large-scale acoustic modeling for commercial venues where sound quality is a critical mission." 
               },
               { 
                 title: "Luxury Resorts", 
                 icon: "holiday_village", 
-                desc: "Curating soundscapes for high-end hospitality to enhance relaxation through acoustic serenity." 
+                desc: "Curating serene soundscapes for hospitality environments to elevate the luxury experience." 
               }
             ].map((item, i) => (
               <motion.div 
