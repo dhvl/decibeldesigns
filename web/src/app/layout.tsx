@@ -4,6 +4,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const manrope = Manrope({ 
   subsets: ["latin"], 
@@ -37,10 +38,10 @@ export const metadata: Metadata = {
     siteName: "DecibelDesigns",
     images: [
       {
-        url: "/media/home/hero-home-cinema.jpg",
+        url: "/opengraph-image.png",
         width: 1200,
-        height: 630,
-        alt: "DecibelDesigns - Acoustic Excellence",
+        height: 1200,
+        alt: "DecibelDesigns - Premium Acoustic Environments",
       },
     ],
     locale: "en_IN",
@@ -50,11 +51,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DecibelDesigns | Acoustic Engineering",
     description: "Professional acoustic design and home theatre setup services.",
-    images: ["/media/home/hero-home-cinema.jpg"],
+    images: ["/opengraph-image.png"],
   },
   icons: {
-    icon: "/media/logos/DD Icon.svg",
-    apple: "/media/logos/DD Icon.svg",
+    icon: "/icon.png",
+    apple: "/icon.png",
   },
 };
 
@@ -74,6 +75,7 @@ export default function RootLayout({
         <main className="relative z-10">
           {children}
         </main>
+        <WhatsAppButton />
         <Footer />
         <Analytics />
       </body>

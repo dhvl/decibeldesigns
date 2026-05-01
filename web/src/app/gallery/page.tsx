@@ -112,12 +112,12 @@ export default function GalleryPage() {
                   src={item.src}
                   alt={`Gallery project ${i}`}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               ) : (
                 <video 
                   src={item.src}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0"
+                  className="w-full h-full object-cover"
                   muted
                   loop
                   onMouseOver={(e) => e.currentTarget.play()}

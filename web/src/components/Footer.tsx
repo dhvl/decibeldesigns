@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Instagram, Linkedin, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -14,6 +15,16 @@ export default function Footer() {
           </div>
           <div className="text-sm font-accent italic text-outline">
             © {new Date().getFullYear()} DecibelDesigns. Precision in sound.
+          </div>
+          <div className="mt-4 flex flex-col gap-2 text-xs font-headline tracking-widest text-on-surface-variant/60 uppercase">
+            <a href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL || "sales@decibeldesigns.in"}`} className="hover:text-primary transition-colors flex items-center gap-2">
+              <span className="material-symbols-outlined text-xs">mail</span>
+              {process.env.NEXT_PUBLIC_CONTACT_EMAIL || "sales@decibeldesigns.in"}
+            </a>
+            <a href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+919873506507").replace(/\+/g, "")}`} className="hover:text-primary transition-colors flex items-center gap-2">
+              <span className="material-symbols-outlined text-xs">call</span>
+              {process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+91 9873 506 507"}
+            </a>
           </div>
         </div>
 
@@ -38,18 +49,30 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="flex gap-6">
+        <div className="flex gap-8">
           <a 
-            href="#" 
-            className="text-on-surface-variant hover:text-secondary transition-all opacity-80 hover:opacity-100"
+            href={process.env.NEXT_PUBLIC_INSTAGRAM_URL || "#"} 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-on-surface-variant hover:text-primary transition-all opacity-70 hover:opacity-100"
           >
-            <span className="material-symbols-outlined">share</span>
+            <Instagram size={20} />
           </a>
           <a 
-            href="#" 
-            className="text-on-surface-variant hover:text-secondary transition-all opacity-80 hover:opacity-100"
+            href={process.env.NEXT_PUBLIC_LINKEDIN_URL || "#"} 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-on-surface-variant hover:text-primary transition-all opacity-70 hover:opacity-100"
           >
-            <span className="material-symbols-outlined">equalizer</span>
+            <Linkedin size={20} />
+          </a>
+          <a 
+            href={process.env.NEXT_PUBLIC_FACEBOOK_URL || "#"} 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-on-surface-variant hover:text-primary transition-all opacity-70 hover:opacity-100"
+          >
+            <Facebook size={20} />
           </a>
         </div>
       </div>

@@ -1,6 +1,24 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    projectType: "home-theatre",
+    email: "",
+    vision: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "sales@decibeldesigns.in";
+    const subject = `Inquiry: ${formData.projectType} - ${formData.name}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nProject Type: ${formData.projectType}\n\nVision:\n${formData.vision}`;
+    window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <main className="pt-32 pb-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
       <header className="mb-16 md:mb-24">
@@ -21,11 +39,14 @@ export default function ContactPage() {
               <span className="material-symbols-outlined text-[200px]">graphic_eq</span>
             </div>
 
-            <form className="space-y-10 relative z-10">
+            <form onSubmit={handleSubmit} className="space-y-10 relative z-10">
               <div className="space-y-1">
                 <label className="font-accent italic text-sm text-outline">Full name</label>
                 <input
                   type="text"
+                  required
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full bg-surface-container-low border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-4 text-on-surface placeholder:text-neutral-700 outline-none"
                   placeholder="John Doe"
                 />
@@ -34,7 +55,11 @@ export default function ContactPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div className="space-y-1">
                   <label className="font-accent italic text-sm text-outline">Project type</label>
-                  <select className="w-full bg-surface-container-low border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-4 text-on-surface appearance-none outline-none cursor-pointer">
+                  <select 
+                    value={formData.projectType}
+                    onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
+                    className="w-full bg-surface-container-low border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-4 text-on-surface appearance-none outline-none cursor-pointer"
+                  >
                     <option value="home-theatre">Home Theatres & Media Rooms</option>
                     <option value="recording-studio">Recording Studios & Music Rooms</option>
                     <option value="corporate">Office Spaces & Conference Rooms</option>
@@ -47,6 +72,9 @@ export default function ContactPage() {
                   <label className="font-accent italic text-sm text-outline">Email address</label>
                   <input
                     type="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full bg-surface-container-low border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-4 text-on-surface placeholder:text-neutral-700 outline-none"
                     placeholder="john@example.com"
                   />
@@ -56,6 +84,9 @@ export default function ContactPage() {
               <div className="space-y-1">
                 <label className="font-accent italic text-sm text-outline">Your vision</label>
                 <textarea
+                  required
+                  value={formData.vision}
+                  onChange={(e) => setFormData({ ...formData, vision: e.target.value })}
                   className="w-full bg-surface-container-low border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-4 text-on-surface placeholder:text-neutral-700 resize-none outline-none"
                   placeholder="Describe your acoustic requirements..."
                   rows={4}
@@ -97,8 +128,17 @@ export default function ContactPage() {
                   <span className="material-symbols-outlined">call</span>
                 </div>
                 <div>
-                  <p className="font-headline font-bold text-sm tracking-tight">+91 9873 506 507</p>
+                  <p className="font-headline font-bold text-sm tracking-tight">{process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+91 9873 506 507"}</p>
                   <p className="font-accent italic text-xs text-neutral-500">Acoustic Expert</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 flex items-center justify-center bg-surface-container-highest rounded-sm text-primary">
+                  <span className="material-symbols-outlined">mail</span>
+                </div>
+                <div>
+                  <p className="font-headline font-bold text-sm tracking-tight">{process.env.NEXT_PUBLIC_CONTACT_EMAIL || "sales@decibeldesigns.in"}</p>
+                  <p className="font-accent italic text-xs text-neutral-500">Official Inquiry</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
