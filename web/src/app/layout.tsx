@@ -26,6 +26,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.decibeldesigns.in"),
   title: {
     default: "DecibelDesigns | Premium Acoustic Design Solutions in New Delhi",
     template: "%s | DecibelDesigns"
@@ -34,11 +35,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DecibelDesigns | Premium Acoustic Design Solutions",
     description: "Professional acoustic engineering and Home Theatre setups in New Delhi.",
-    url: "https://decibeldesigns.vercel.app",
+    url: "https://www.decibeldesigns.in",
     siteName: "DecibelDesigns",
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "/og-main.png",
         width: 1200,
         height: 1200,
         alt: "DecibelDesigns - Premium Acoustic Environments",
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DecibelDesigns | Acoustic Engineering",
     description: "Professional acoustic design and home theatre setup services.",
-    images: ["/opengraph-image.png"],
+    images: ["/og-main.png"],
   },
   icons: {
     icon: "/icon.png",
