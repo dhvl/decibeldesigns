@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import HeroCarousel from "@/components/HeroCarousel";
 
 export default function Home() {
   return (
@@ -21,38 +22,52 @@ export default function Home() {
         </div>
         
         <div className="container mx-auto px-8 md:px-12 relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-3xl"
-          >
-            <span className="inline-block py-1 px-3 mb-6 bg-secondary/10 text-secondary text-sm font-accent italic border border-secondary/20">
-              Acoustic excellence
-            </span>
-            <h1 className="text-6xl md:text-8xl font-headline font-extrabold text-on-surface leading-[1.1] tracking-tighter mb-8 text-balance">
-              Professional Acoustic <br/> 
-              <span className="text-primary font-accent italic font-medium capitalize">Design Solutions.</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-on-surface-variant font-light mb-12 max-w-xl leading-relaxed">
-              New Delhi&apos;s premier engineering atelier for high-end Home Theatre setups, studios, and commercial spaces. Where technical precision meets luxury design.
-            </p>
-            <div className="flex flex-wrap gap-6">
-              <Link 
-                href="/portfolio" 
-                className="copper-gold-gradient px-8 py-4 text-background font-headline font-bold uppercase tracking-widest text-sm rounded-sm hover:shadow-[0_0_30px_rgba(239,171,34,0.3)] transition-all"
-              >
-                View Our Work
-              </Link>
-              <Link 
-                href="/services" 
-                className="group flex items-center gap-3 px-8 py-4 border border-outline-variant/30 text-on-surface font-headline font-bold uppercase tracking-widest text-sm hover:bg-white/5 transition-all"
-              >
-                The Process
-                <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
-              </Link>
-            </div>
-          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="max-w-3xl"
+            >
+              <span className="inline-block py-1 px-3 mb-6 bg-secondary/10 text-secondary text-sm font-accent italic border border-secondary/20">
+                Acoustic excellence
+              </span>
+              <h1 className="text-6xl md:text-8xl font-headline font-extrabold text-on-surface leading-[1.1] tracking-tighter mb-8 text-balance">
+                Professional Acoustic <br/> 
+                <span className="text-primary font-accent italic font-medium capitalize">Design Solutions.</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-on-surface-variant font-light mb-12 max-w-xl leading-relaxed">
+                New Delhi&apos;s premier engineering atelier for high-end Home Theatre setups, studios, and commercial spaces. Where technical precision meets luxury design.
+              </p>
+              <div className="flex flex-wrap gap-6">
+                <Link 
+                  href="/portfolio" 
+                  className="copper-gold-gradient px-8 py-4 text-background font-headline font-bold uppercase tracking-widest text-sm rounded-sm hover:shadow-[0_0_30px_rgba(239,171,34,0.3)] transition-all"
+                >
+                  View Our Work
+                </Link>
+                <Link 
+                  href="/services" 
+                  className="group flex items-center gap-3 px-8 py-4 border border-outline-variant/30 text-on-surface font-headline font-bold uppercase tracking-widest text-sm hover:bg-white/5 transition-all"
+                >
+                  The Process
+                  <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                </Link>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, x: 50 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+              className="hidden lg:block relative"
+            >
+              <HeroCarousel />
+              {/* Decorative Elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 border-t-2 border-r-2 border-primary/30 z-20 pointer-events-none" />
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-secondary/30 z-20 pointer-events-none" />
+            </motion.div>
+          </div>
         </div>
 
         {/* Dynamic Animated Soundwave (Amplified) */}
