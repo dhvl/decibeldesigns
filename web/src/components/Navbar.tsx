@@ -16,13 +16,26 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
+  const services = [
+    { name: "Residential Theatres", href: "/services/residential-theatres" },
+    { name: "Studio Isolation", href: "/services/studio-isolation" },
+    { name: "Corporate Privacy", href: "/services/corporate-privacy" },
+    { name: "Culinary Ambiance", href: "/services/culinary-ambiance" },
+    { name: "Great Halls", href: "/services/great-halls" },
+    { name: "Hospitality Sanctuaries", href: "/services/hospitality-sanctuaries" },
+  ];
+
   const navLinks = [
-    { name: "Services", href: "/services" },
     { name: "Portfolio", href: "/portfolio" },
     { name: "Gallery", href: "/gallery" },
   ];
 
-  const closeMenu = () => setIsOpen(false);
+  const closeMenu = () => {
+    setIsOpen(false);
+    setIsServicesOpen(false);
+  };
+
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl border-b border-outline-variant/10 shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
@@ -52,6 +65,51 @@ export default function Navbar() {
           >
             Home
           </Link>
+
+          {/* Services Dropdown */}
+          <div 
+            className="relative group"
+            onMouseEnter={() => setIsServicesOpen(true)}
+            onMouseLeave={() => setIsServicesOpen(false)}
+          >
+            <Link
+              href="/services"
+              className={cn(
+                "font-headline tracking-tight text-sm uppercase transition-colors flex items-center gap-1",
+                pathname.startsWith("/services")
+                  ? "text-primary font-bold border-b-2 border-primary pb-1"
+                  : "text-on-surface-variant hover:text-primary"
+              )}
+            >
+              Services
+              <span className="material-symbols-outlined text-sm">expand_more</span>
+            </Link>
+
+            <AnimatePresence>
+              {isServicesOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  className="absolute left-0 mt-2 w-64 bg-surface-container-high border border-outline-variant/10 shadow-2xl rounded-sm p-4 z-[60]"
+                >
+                  <div className="flex flex-col gap-2">
+                    {services.map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        onClick={() => setIsServicesOpen(false)}
+                        className="text-xs font-headline uppercase tracking-widest text-on-surface-variant hover:text-primary hover:bg-white/5 px-4 py-2 rounded-sm transition-all"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -107,6 +165,37 @@ export default function Navbar() {
               >
                 Home
               </Link>
+              <div className="flex flex-col gap-2">
+                <Link 
+                  href="/services" 
+                  onClick={closeMenu}
+                  className={cn(
+                    "font-headline tracking-[0.2em] text-xs uppercase px-4 py-3 rounded-sm transition-colors",
+                    pathname === "/services" 
+                      ? "bg-primary/10 text-primary border-l-2 border-primary" 
+                      : "text-on-surface-variant hover:bg-white/5"
+                  )}
+                >
+                  All Services
+                </Link>
+                <div className="flex flex-col gap-1 pl-6">
+                  {services.map((service) => (
+                    <Link
+                      key={service.href}
+                      href={service.href}
+                      onClick={closeMenu}
+                      className={cn(
+                        "font-headline tracking-[0.2em] text-[10px] uppercase px-4 py-2 rounded-sm transition-colors",
+                        pathname === service.href
+                          ? "text-primary"
+                          : "text-on-surface-variant/60 hover:text-primary hover:bg-white/5"
+                      )}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
