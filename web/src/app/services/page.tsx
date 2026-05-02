@@ -20,7 +20,7 @@ export default function ServicesPage() {
       {/* Bento Grid Services */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
         {/* 1. Residential: High-End Home Theatre */}
-        <div className="md:col-span-8 group relative overflow-hidden rounded-lg bg-surface-container-low border border-white/5 transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(239,171,34,0.1)]">
+        <Link href="/services/residential-theatres" className="md:col-span-8 group relative overflow-hidden rounded-lg bg-surface-container-low border border-white/5 transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(239,171,34,0.1)]">
           <div className="aspect-[16/9] relative">
             <Image 
               src="/media/portfolio/bel-air-cinema.jpg" 
@@ -32,7 +32,7 @@ export default function ServicesPage() {
           </div>
           <div className="absolute bottom-0 left-0 p-10 w-full">
             <div className="flex items-center gap-3 mb-4">
-              <span className="material-symbols-outlined text-primary">theaters</span>
+              <span className="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">theaters</span>
               <h2 className="text-3xl font-headline font-bold">Residential <i className="font-accent italic font-normal text-secondary">Theatres</i></h2>
             </div>
             <p className="text-on-surface-variant max-w-lg mb-8 leading-relaxed">
@@ -43,11 +43,11 @@ export default function ServicesPage() {
               <span className="px-4 py-1.5 bg-surface-container-highest text-secondary text-[10px] uppercase tracking-widest rounded-full">Modal Analysis</span>
             </div>
           </div>
-        </div>
+        </Link>
 
         {/* 2. Recording Studios */}
-        <div className="md:col-span-4 noir-gradient rounded-lg p-10 flex flex-col justify-center relative overflow-hidden border border-white/5">
-          <span className="material-symbols-outlined text-primary text-5xl mb-6">mic_external_on</span>
+        <Link href="/services/studio-isolation" className="md:col-span-4 noir-gradient rounded-lg p-10 flex flex-col justify-center relative overflow-hidden border border-white/5 group hover:shadow-[0_40px_80px_-20px_rgba(239,171,34,0.1)] transition-all">
+          <span className="material-symbols-outlined text-primary text-5xl mb-6 group-hover:scale-110 transition-transform">mic_external_on</span>
           <h2 className="text-3xl font-headline font-bold text-white mb-4">Studio <i className="font-accent italic font-normal text-primary">Isolation</i></h2>
           <p className="text-white/60 text-sm leading-relaxed mb-8">
             Mastering-grade isolation and frequency control for world-class production environments.
@@ -56,11 +56,11 @@ export default function ServicesPage() {
             <li className="flex items-center gap-2 font-bold text-white/80"><span className="w-1.5 h-1.5 bg-primary rounded-full"></span> Zero Noise Floor</li>
             <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-primary rounded-full"></span> Diffuser Arrays</li>
           </ul>
-        </div>
+        </Link>
 
         {/* 3. Corporate Spaces */}
-        <div className="md:col-span-4 bg-surface-container-high rounded-lg p-10 border border-white/5 group hover:bg-surface-container-highest transition-colors">
-          <span className="material-symbols-outlined text-primary mb-6 block text-4xl">corporate_fare</span>
+        <Link href="/services/corporate-privacy" className="md:col-span-4 bg-surface-container-high rounded-lg p-10 border border-white/5 group hover:bg-surface-container-highest transition-colors hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.3)]">
+          <span className="material-symbols-outlined text-primary mb-6 block text-4xl group-hover:scale-110 transition-transform">corporate_fare</span>
           <h2 className="text-2xl font-headline font-bold mb-4">Corporate <i className="font-accent italic font-normal text-secondary">Privacy</i></h2>
           <p className="text-on-surface-variant text-sm leading-relaxed mb-6">
             Optimizing speech intelligibility and acoustic privacy for conference rooms and open offices.
@@ -68,12 +68,12 @@ export default function ServicesPage() {
           <div className="text-[10px] font-headline text-outline uppercase tracking-widest border-t border-outline-variant/10 pt-4">
             Acoustic Privacy Index: <span className="text-secondary ml-2">99.8%</span>
           </div>
-        </div>
+        </Link>
 
         {/* 4. Restaurants & Cafes */}
-        <div className="md:col-span-4 bg-surface-container-low rounded-lg p-10 border border-white/5 flex flex-col justify-between">
+        <Link href="/services/culinary-ambiance" className="md:col-span-4 bg-surface-container-low rounded-lg p-10 border border-white/5 flex flex-col justify-between group hover:bg-surface-container-high transition-colors hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.3)]">
           <div>
-            <span className="material-symbols-outlined text-primary mb-6 block text-4xl">restaurant</span>
+            <span className="material-symbols-outlined text-primary mb-6 block text-4xl group-hover:scale-110 transition-transform">restaurant</span>
             <h2 className="text-2xl font-headline font-bold mb-4">Culinary <i className="font-accent italic font-normal text-secondary">Ambiance</i></h2>
             <p className="text-on-surface-variant text-sm leading-relaxed">
               Engineering the perfect noise floor for restaurants so conversations remain intimate while music feels alive.
@@ -82,19 +82,19 @@ export default function ServicesPage() {
           <div className="mt-8">
             <span className="text-[10px] font-headline text-secondary tracking-widest uppercase">Decibel Control System</span>
           </div>
-        </div>
+        </Link>
 
         {/* 5. Auditoriums & Venues */}
-        <div className="md:col-span-4 bg-secondary-container/10 rounded-lg p-10 border border-secondary/10 flex flex-col justify-center">
-          <span className="material-symbols-outlined text-secondary mb-6 block text-4xl">meeting_room</span>
+        <Link href="/services/great-halls" className="md:col-span-4 bg-secondary-container/10 rounded-lg p-10 border border-secondary/10 flex flex-col justify-center group hover:bg-secondary-container/20 transition-colors hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.3)]">
+          <span className="material-symbols-outlined text-secondary mb-6 block text-4xl group-hover:scale-110 transition-transform">meeting_room</span>
           <h2 className="text-2xl font-headline font-bold mb-4">Great <i className="font-accent italic font-normal text-primary">Halls</i></h2>
           <p className="text-on-surface-variant text-sm leading-relaxed">
             Large-scale acoustic modeling for performance venues and commercial auditoriums.
           </p>
-        </div>
+        </Link>
 
         {/* 6. Luxury Hospitality */}
-        <div className="md:col-span-12 group relative overflow-hidden rounded-lg bg-surface-container-lowest border border-white/5 h-80">
+        <Link href="/services/hospitality-sanctuaries" className="md:col-span-12 group relative overflow-hidden rounded-lg bg-surface-container-lowest border border-white/5 h-80 transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(239,171,34,0.1)]">
           <Image 
             src="/media/portfolio/grand-resort.jpg" 
             alt="Hospitality soundscape" 
@@ -107,7 +107,7 @@ export default function ServicesPage() {
               Curating high-end soundscapes for luxury resorts and spas through architectural serenity and passive noise control technologies.
             </p>
           </div>
-        </div>
+        </Link>
       </div>
       {/* Client Call to Action */}
       <section className="mt-32 py-20 border-t border-outline-variant/10 text-center">
