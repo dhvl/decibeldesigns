@@ -39,19 +39,19 @@ export default function Home() {
               <p className="text-xl md:text-2xl text-on-surface-variant font-light mb-12 max-w-xl leading-relaxed">
                 New Delhi&apos;s premier engineering atelier for high-end Home Theatre setups, studios, and commercial spaces. Where technical precision meets luxury design.
               </p>
-              <div className="flex flex-wrap gap-6">
+              <div className="grid grid-cols-2 gap-4 md:flex md:flex-wrap md:gap-6">
                 <Link 
                   href="/portfolio" 
-                  className="copper-gold-gradient px-8 py-4 text-background font-headline font-bold uppercase tracking-widest text-sm rounded-sm hover:shadow-[0_0_30px_rgba(239,171,34,0.3)] transition-all"
+                  className="copper-gold-gradient px-4 md:px-8 py-4 text-background font-headline font-bold uppercase tracking-widest text-[10px] md:text-sm rounded-sm hover:shadow-[0_0_30px_rgba(239,171,34,0.3)] transition-all flex items-center justify-center text-center"
                 >
                   View Our Work
                 </Link>
                 <Link 
                   href="/services" 
-                  className="group flex items-center gap-3 px-8 py-4 border border-outline-variant/30 text-on-surface font-headline font-bold uppercase tracking-widest text-sm hover:bg-white/5 transition-all"
+                  className="group flex items-center justify-center text-center gap-2 md:gap-3 px-4 md:px-8 py-4 border border-outline-variant/30 text-on-surface font-headline font-bold uppercase tracking-widest text-[10px] md:text-sm hover:bg-white/5 transition-all"
                 >
                   The Process
-                  <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                  <span className="material-symbols-outlined text-sm md:text-base group-hover:translate-x-2 transition-transform">arrow_forward</span>
                 </Link>
               </div>
             </motion.div>
@@ -60,7 +60,7 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.9, x: 50 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-              className="hidden lg:block relative"
+              className="relative mt-12 lg:mt-0"
             >
               <HeroCarousel />
               {/* Decorative Elements */}
