@@ -38,7 +38,10 @@ const servicesData = {
     images: [
       "/media/services/studio-vocal-booth.png",
       "/media/services/studio-podcast-main.png",
-      "/media/services/studio-podcast-side.png"
+      "/media/services/studio-podcast-side.png",
+      "/media/services/studio-original-vocal.jpg",
+      "/media/services/studio-original-podcast-1.jpg",
+      "/media/services/studio-original-podcast-2.jpg"
     ],
     icon: "mic_external_on"
   },
