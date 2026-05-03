@@ -36,9 +36,9 @@ const servicesData = {
       "Custom Studio Furniture"
     ],
     images: [
-      "/media/services/studio-1.png",
-      "/media/services/studio-2.png",
-      "/media/portfolio/onyx-studios.jpg"
+      "/media/services/studio-vocal-booth.png",
+      "/media/services/studio-podcast-main.png",
+      "/media/services/studio-podcast-side.png"
     ],
     icon: "mic_external_on"
   },

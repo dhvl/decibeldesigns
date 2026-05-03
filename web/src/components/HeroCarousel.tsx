@@ -13,7 +13,7 @@ const categories = [
   {
     title: "Recording Studios",
     oneLiner: "Frequency-neutral environments for absolute sonic control.",
-    image: "/media/hero/recording-studio.png",
+    image: "/media/services/studio-podcast-main.png",
   },
   {
     title: "Corporate Spaces",
