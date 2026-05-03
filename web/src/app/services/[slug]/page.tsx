@@ -126,21 +126,33 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
 
   return (
     <main className="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+      {/* Back to Services - Desktop Only */}
       <Link 
         href="/services" 
-        className="flex items-center gap-2 text-secondary text-xs uppercase tracking-widest mb-12 hover:text-primary transition-colors group"
+        className="hidden lg:flex items-center gap-2 text-secondary text-xs uppercase tracking-widest mb-12 hover:text-primary transition-colors group w-fit"
       >
         <span className="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform">arrow_back</span>
         Back to Services
       </Link>
 
+      {/* Mobile-Only Title and Carousel Header */}
+      <div className="lg:hidden mb-12">
+        <h1 className="text-4xl font-headline font-bold leading-tight text-on-surface mb-8">
+          {service.title.split(' ')[0]} <i className="font-accent italic font-normal text-primary">{service.title.split(' ').slice(1).join(' ')}</i>
+        </h1>
+        <ServiceCarousel images={service.images} title={service.title} />
+      </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
         {/* Left Column: Content */}
         <div className="lg:col-span-7">
           <span className="font-headline text-secondary tracking-[0.3em] uppercase text-xs mb-4 block">{service.subtitle}</span>
-          <h1 className="text-4xl md:text-6xl font-headline font-bold leading-tight text-on-surface mb-8">
+          
+          {/* Desktop-Only Title */}
+          <h1 className="hidden lg:block text-4xl md:text-6xl font-headline font-bold leading-tight text-on-surface mb-8">
             {service.title.split(' ')[0]} <i className="font-accent italic font-normal text-primary">{service.title.split(' ').slice(1).join(' ')}</i>
           </h1>
+          
           <p className="text-on-surface-variant text-lg leading-relaxed mb-12">
             {service.description}
           </p>
@@ -174,7 +186,10 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
 
         {/* Right Column: Carousel & CTA */}
         <div className="lg:col-span-5 flex flex-col gap-8">
-          <ServiceCarousel images={service.images} title={service.title} />
+          {/* Desktop-Only Carousel */}
+          <div className="hidden lg:block">
+            <ServiceCarousel images={service.images} title={service.title} />
+          </div>
           
           <div className="bg-surface-container-low p-10 rounded-lg border border-white/5 relative overflow-hidden">
             <div className="relative z-10">
