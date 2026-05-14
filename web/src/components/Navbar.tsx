@@ -6,7 +6,8 @@ import { usePathname } from "next/navigation";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, FileDown } from "lucide-react";
+import BrochureModal from "./BrochureModal";
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -15,6 +16,7 @@ function cn(...inputs: ClassValue[]) {
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [isBrochureOpen, setIsBrochureOpen] = useState(false);
 
   const services = [
     { name: "Residential Theatres", href: "/services/residential-theatres" },
@@ -130,6 +132,13 @@ export default function Navbar() {
           >
             Request Consultation
           </Link>
+          <button 
+            onClick={() => setIsBrochureOpen(true)}
+            className="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-headline text-xs tracking-widest uppercase border border-outline-variant/30 px-4 py-2.5 rounded-sm"
+          >
+            <FileDown size={16} />
+            Brochure
+          </button>
         </div>
 
         {/* Mobile Hamburger Button */}
@@ -218,10 +227,25 @@ export default function Navbar() {
               >
                 Request Consultation
               </Link>
+              <button 
+                onClick={() => {
+                  closeMenu();
+                  setIsBrochureOpen(true);
+                }}
+                className="flex items-center justify-center gap-3 text-primary font-headline text-xs tracking-widest uppercase px-6 py-4 rounded-sm border border-primary/20 bg-primary/5 active:scale-95 transition-all"
+              >
+                <FileDown size={18} />
+                Download Brochure
+              </button>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
+
+      <BrochureModal 
+        isOpen={isBrochureOpen} 
+        onClose={() => setIsBrochureOpen(false)} 
+      />
     </nav>
   );
 }

@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { FileDown } from "lucide-react";
+import BrochureModal from "@/components/BrochureModal";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -10,6 +12,7 @@ export default function ContactPage() {
     email: "",
     vision: ""
   });
+  const [isBrochureOpen, setIsBrochureOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -153,6 +156,25 @@ export default function ContactPage() {
             </div>
           </div>
 
+          <div className="bg-primary/5 p-8 rounded-lg border border-primary/20 relative overflow-hidden group hover:bg-primary/10 transition-all duration-500 cursor-pointer" onClick={() => setIsBrochureOpen(true)}>
+            <div className="relative z-10 space-y-4">
+              <h4 className="font-headline font-bold text-xl text-primary flex items-center gap-2">
+                Request our Brochure
+                <FileDown size={20} className="group-hover:translate-y-1 transition-transform" />
+              </h4>
+              <p className="text-sm text-on-surface-variant leading-relaxed">
+                Explore our full 2026 collection, technical specifications, and acoustic engineering philosophy in our latest digital brochure.
+              </p>
+              <button className="inline-flex items-center gap-2 text-secondary font-accent italic text-sm hover:text-primary transition-colors">
+                Get PDF copy
+                <span className="material-symbols-outlined text-sm">download</span>
+              </button>
+            </div>
+            <div className="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity">
+              <FileDown size={120} />
+            </div>
+          </div>
+
           <div className="bg-surface-container-highest p-8 rounded-lg border border-white/5 relative overflow-hidden">
             <div className="relative z-10 space-y-4">
               <h4 className="font-accent italic text-lg text-primary">Private demo invitation</h4>
@@ -173,6 +195,11 @@ export default function ContactPage() {
           </div>
         </aside>
       </div>
+
+      <BrochureModal 
+        isOpen={isBrochureOpen} 
+        onClose={() => setIsBrochureOpen(false)} 
+      />
     </main>
   );
 }
