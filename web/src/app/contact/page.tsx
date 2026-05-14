@@ -58,7 +58,7 @@ export default function ContactPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div className="space-y-1">
                   <label className="font-accent italic text-sm text-outline">Project type</label>
-                  <select 
+                  <select
                     value={formData.projectType}
                     onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
                     className="w-full bg-surface-container-low border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-4 text-on-surface appearance-none outline-none cursor-pointer"
@@ -162,11 +162,11 @@ export default function ContactPage() {
                 Request our Brochure
                 <FileDown size={20} className="group-hover:translate-y-1 transition-transform" />
               </h4>
-              <p className="text-sm text-on-surface-variant leading-relaxed">
+              {/* <p className="text-sm text-on-surface-variant leading-relaxed">
                 Explore our full 2026 collection, technical specifications, and acoustic engineering philosophy in our latest digital brochure.
-              </p>
+              </p> */}
               <button className="inline-flex items-center gap-2 text-secondary font-accent italic text-sm hover:text-primary transition-colors">
-                Get PDF copy
+                Download Brochure
                 <span className="material-symbols-outlined text-sm">download</span>
               </button>
             </div>
@@ -196,9 +196,9 @@ export default function ContactPage() {
         </aside>
       </div>
 
-      <BrochureModal 
-        isOpen={isBrochureOpen} 
-        onClose={() => setIsBrochureOpen(false)} 
+      <BrochureModal
+        isOpen={isBrochureOpen}
+        onClose={() => setIsBrochureOpen(false)}
       />
     </main>
   );
