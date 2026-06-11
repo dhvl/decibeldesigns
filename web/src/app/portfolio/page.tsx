@@ -7,8 +7,8 @@ export default function PortfolioPage() {
       title: "The Grand Resort Auditorium",
       category: "Institutional",
       year: "2024",
-      desc: "A masterclass in spatial acoustics, featuring adaptive reverberation controls and bespoke copper diffusion panels.",
-      image: "/media/portfolio/grand-resort.jpg",
+      desc: "A masterclass in spatial acoustics, featuring adaptive reverberation controls and bespoke timber diffusion panels.",
+      image: "/media/project-updates/decibel-designs-auditorium-acoustic-wood-panels-lights.jpg",
       size: "large"
     },
     {

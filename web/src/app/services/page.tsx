@@ -109,6 +109,65 @@ export default function ServicesPage() {
           </div>
         </Link>
       </div>
+
+      {/* Behind the Science: Technical Process */}
+      <section className="mt-32 border-t border-outline-variant/10 pt-24">
+        <header className="mb-16">
+          <span className="font-headline text-primary tracking-[0.3em] uppercase text-xs mb-4 block">Scientific Execution</span>
+          <h2 className="text-4xl md:text-5xl font-headline font-bold">
+            The Physics of <i className="font-accent italic font-normal text-secondary">Acoustic Engineering</i>
+          </h2>
+          <p className="text-on-surface-variant max-w-xl mt-4 text-sm leading-relaxed">
+            We don&apos;t just decorate walls. Here is the real, step-by-step engineering process behind our high-performance sound isolation systems.
+          </p>
+        </header>
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {[
+            {
+              step: "01",
+              title: "Isolation Framing",
+              image: "/media/project-updates/decibel-designs-acoustic-metal-framing-grid-03.jpg",
+              desc: "Heavy-gauge metal channels create a decoupled room-in-room shell, preventing low-frequency structural noise transfer."
+            },
+            {
+              step: "02",
+              title: "Fiberwool Absorption",
+              image: "/media/project-updates/decibel-designs-acoustic-fiberwool-installation-02.jpg",
+              desc: "High-density acoustic rockwool is layered inside the cavity to absorb airborne sound energy and eliminate hollow resonances."
+            },
+            {
+              step: "03",
+              title: "Fabric Wrapped Panels",
+              image: "/media/project-updates/decibel-designs-acoustic-fabric-panels-installation-18.jpg",
+              desc: "Acoustically transparent fabrics are wrapped over precision backing templates to manage primary room reflections."
+            },
+            {
+              step: "04",
+              title: "Timber Slats & Finish",
+              image: "/media/project-updates/decibel-designs-acoustic-wood-slats-installation-11.jpg",
+              desc: "Bespoke wooden slats are installed at mathematically mapped locations to scatter high-frequencies for a natural tone."
+            }
+          ].map((item, index) => (
+            <div key={index} className="bg-surface-container-low border border-white/5 rounded-lg overflow-hidden group hover:border-primary/20 transition-all duration-300">
+              <div className="aspect-[4/3] relative overflow-hidden bg-black">
+                <Image 
+                  src={item.image} 
+                  alt={item.title} 
+                  fill 
+                  className="object-cover opacity-60 group-hover:opacity-85 group-hover:scale-105 transition-all duration-500"
+                />
+                <span className="absolute top-4 left-4 font-headline text-3xl font-black text-white/20 group-hover:text-primary/40 transition-colors">{item.step}</span>
+              </div>
+              <div className="p-6 space-y-3">
+                <h3 className="font-headline font-bold text-lg group-hover:text-primary transition-colors">{item.title}</h3>
+                <p className="text-xs text-on-surface-variant leading-relaxed font-light">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Client Call to Action */}
       <section className="mt-32 py-20 border-t border-outline-variant/10 text-center">
         <h2 className="text-3xl md:text-5xl font-headline font-bold mb-8">

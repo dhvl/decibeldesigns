@@ -21,6 +21,12 @@ const galleryItems: GalleryItem[] = [
   { src: "/media/gallery/residential-theater-preview.mp4", category: "Residential", type: "video" },
   
   // Commercial / Auditoriums
+  { src: "/media/project-updates/decibel-designs-auditorium-acoustic-wood-panels-lights.jpg", category: "Commercial", type: "image" },
+  { src: "/media/project-updates/decibel-designs-completed-multipurpose-hall-wooden-flooring.jpg", category: "Commercial", type: "image" },
+  { src: "/media/project-updates/decibel-designs-acoustic-auditorium-stage-curtains.jpg", category: "Commercial", type: "image" },
+  { src: "/media/project-updates/decibel-designs-completed-acoustic-hall-rear-view.jpg", category: "Commercial", type: "image" },
+  { src: "/media/project-updates/decibel-designs-auditorium-acoustic-wall-cladding-led-strips.jpg", category: "Commercial", type: "image" },
+  { src: "/media/project-updates/decibel-designs-acoustic-auditorium-balcony-view.jpg", category: "Commercial", type: "image" },
   { src: "/media/gallery/commercial-auditorium-01.jpeg", category: "Commercial", type: "image" },
   { src: "/media/gallery/commercial-auditorium-02.jpeg", category: "Commercial", type: "image" },
   { src: "/media/gallery/commercial-auditorium-03.jpeg", category: "Commercial", type: "image" },
