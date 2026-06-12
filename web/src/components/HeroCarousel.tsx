@@ -13,7 +13,7 @@ const categories = [
   {
     title: "Home Theatres",
     oneLiner: "Bespoke cinematic experiences with reference-grade audio.",
-    image: "/media/hero/home-theatre.png",
+    image: "/media/gallery/residential-theater-04.jpeg",
   },
   {
     title: "Recording Studios",
@@ -23,7 +23,7 @@ const categories = [
   {
     title: "Corporate Spaces",
     oneLiner: "Intelligent acoustic zoning for clarity and privacy.",
-    image: "/media/hero/corporate.png",
+    image: "/media/gallery/professional-audio-09.jpeg",
   },
   {
     title: "Luxury Lounges",
