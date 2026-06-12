@@ -133,7 +133,7 @@ export default function ServicesPage() {
             {
               step: "02",
               title: "Fiberwool Absorption",
-              image: "/media/project-updates/decibel-designs-acoustic-fiberwool-installation-02.jpg",
+              image: "/media/project-updates/decibel-designs-acoustic-ceiling-framing-details-24.jpg",
               desc: "High-density acoustic rockwool is layered inside the cavity to absorb airborne sound energy and eliminate hollow resonances."
             },
             {
