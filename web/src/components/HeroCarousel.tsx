@@ -6,6 +6,11 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const categories = [
   {
+    title: "Auditoriums",
+    oneLiner: "Large-scale acoustic modeling for mission-critical venues.",
+    image: "/media/project-updates/decibel-designs-auditorium-acoustic-wood-panels-lights.jpg",
+  },
+  {
     title: "Home Theatres",
     oneLiner: "Bespoke cinematic experiences with reference-grade audio.",
     image: "/media/hero/home-theatre.png",
@@ -24,11 +29,6 @@ const categories = [
     title: "Luxury Lounges",
     oneLiner: "Curating serene soundscapes for premium hospitality.",
     image: "/media/hero/lounge.png",
-  },
-  {
-    title: "Auditoriums",
-    oneLiner: "Large-scale acoustic modeling for mission-critical venues.",
-    image: "/media/project-updates/decibel-designs-auditorium-acoustic-wood-panels-lights.jpg",
   },
 ];
 
