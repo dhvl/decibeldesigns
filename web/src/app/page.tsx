@@ -12,10 +12,10 @@ export default function Home() {
       <header className="relative min-h-screen flex items-center justify-start overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/media/home/hero-home-cinema.jpg"
-            alt="ultra-luxury home cinema room"
+            src="/media/project-updates/decibel-designs-auditorium-acoustic-wood-panels-lights.jpg"
+            alt="completed multipurpose auditorium hall with acoustic wood panels"
             fill
-            className="object-cover grayscale-[0.6] brightness-[0.25]"
+            className="object-cover grayscale-[0.2] brightness-[0.35]"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>

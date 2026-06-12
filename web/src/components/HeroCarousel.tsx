@@ -28,7 +28,7 @@ const categories = [
   {
     title: "Auditoriums",
     oneLiner: "Large-scale acoustic modeling for mission-critical venues.",
-    image: "/media/hero/auditorium.png",
+    image: "/media/project-updates/decibel-designs-auditorium-acoustic-wood-panels-lights.jpg",
   },
 ];
 
